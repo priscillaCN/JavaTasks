@@ -4,7 +4,6 @@ public class HiFiveAndHiEvenDisplay {
 
 	public static void main(String[] args) {
 
-
 		Scanner userInput = new Scanner(System.in);
 
 		System.out.print("Enter any number: ");
@@ -20,7 +19,6 @@ public class HiFiveAndHiEvenDisplay {
 		if (divisibleTwo == 0) {
 		      System.out.println("HiEven");
 		}
-	
 
 	}
 
