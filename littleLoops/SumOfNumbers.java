@@ -9,15 +9,15 @@ public class SumOfNumbers {
 		System.out.print("Enter any number: ");
 		int n = userInput.nextInt();
 
-		int number = 1;
+		int number = 2;
 		int sum = 1;
 
 		while (number <= n) {
 		sum += number;
+		System.out.printf("%d%n", sum);
 		number++;
 		}
 
-		System.out.printf("The sum of numbers from 1 to %d is %d", n, sum);
 	}
 
 }
