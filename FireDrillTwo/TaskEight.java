@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class TaskSeven {
+public class TaskEight {
 
 	public static void main(String[] args) {
 
@@ -9,18 +9,18 @@ public class TaskSeven {
 	int count = 1;
 	int sum = 0;
 
-	for (count = 1; count <= 10; count++) {
+	for (count = 1; true; count++) {
 	   System.out.println("Enter score" + count + ": ");
 	   int score = collectInput.nextInt();
 	
-	if (score % 2 == 0) {
-	   sum = sum + score;
+	sum = sum + score;
+	if (count == 10) {
+	   break;
 	}
 	}
 
 	System.out.println("The sum is: " + sum);
-	System.out.print("The average is: " + (sum / 2));
-
+	
 	}
 
 }
