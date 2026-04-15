@@ -16,6 +16,7 @@ public class SumOfNumbers {
 		sum += number;
 		System.out.printf("%d%n", sum);
 		number++;
+
 		}
 
 	}

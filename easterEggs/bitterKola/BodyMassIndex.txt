@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class BodyMassIndex {
+
+	public static void main(String[] args) {
+
+		Scanner userInput = new Scanner(System.in);
+
+		System.out.print("Enter your weight in kg: ");
+		int weight = userInput.nextint();
+
+		System.out.print("Enter your height in meters: ");
+		int height = userInput.nextint();
+
+		double bmi = weight / height * height;
+
+		if 	
+
+	}
+
+}
