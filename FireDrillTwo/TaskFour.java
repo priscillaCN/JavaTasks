@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class TaskOne {
+public class TaskFour {
 
 	public static void main(String[] args) {
 
@@ -10,13 +10,16 @@ public class TaskOne {
 	int sum = 0;
 
 	for (count = 1; count <= 10; count++) {
-	System.out.println("Enter score" + count + ": ");
-	int score = collectInput.nextInt();
-
-	sum = sum + score;
+	   System.out.println("Enter score" + count + ": ");
+	   int score = collectInput.nextInt();
+	
+	if (count % 2 == 0) {
+	   sum = sum + score;
+	}
 	}
 
 	System.out.println("The sum is: " + sum);
+
 	}
 
 }
