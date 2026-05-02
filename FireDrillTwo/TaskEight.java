@@ -12,15 +12,15 @@ public class TaskEight {
 	for (count = 1; true; count++) {
 	   System.out.println("Enter score" + count + ": ");
 	   int score = collectInput.nextInt();
-	
+
+	   if (score <= 100 && count == 10) {
+	      break;
+	   }
+
 	sum = sum + score;
-	if (count == 10) {
-	   break;
-	}
 	}
 
 	System.out.println("The sum is: " + sum);
-	
 	}
 
 }

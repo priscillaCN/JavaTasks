@@ -49,7 +49,16 @@ public class Kata {
 		
 		float quotient = divide(numberOne, numberTwo);
 		
-		System.out.println("The answer is: " + .2fquotient + "\n");
+		System.out.println("The answer is: " + quotient + "\n");
+		
+		System.out.println("Task six is to get the factors of a number\n");
+		
+		System.out.println("Enter any number:");
+		number = collectInput.nextInt();
+		
+		int factorsOfNumber = factors(number);
+		
+		System.out.println("The factors of " + number + "is" + "\n" + factorsOfNumber);
 
 	}
 
@@ -98,5 +107,14 @@ public class Kata {
 			
 		}
 
+		public static int factors(int number) {
+			int count = 0;
+			for (count = 1; count <= number; count++); {
+				if (number % count == 0); {
+					return count;
+				}	
+			} 
+			
+		}
 
 }

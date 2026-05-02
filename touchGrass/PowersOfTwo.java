@@ -5,6 +5,7 @@ public class PowersOfTwo {
 	public static void main(String[] args) {
 		
 		int baseNumber = 2;
+		int powerOfBaseNumber = 0;
 		
 		Scanner collectInput = new Scanner(System.in);
 		
@@ -12,7 +13,9 @@ public class PowersOfTwo {
 		int valueOfN = collectInput.nextInt();
 		
 		for(int count = 1; count <= valueOfN; count++) {
-			System.out.println(Math.pow(baseNumber, count));
+			if (powerOfBaseNumber == Math.pow(baseNumber, count)) {
+			System.out.println(baseNumber + " to the power of " + count + " is " + powerOfBaseNumber);
+			}
 		}
 		
 	}
