@@ -34,7 +34,7 @@ public class MenstrualAppTest {
 	
 	@Test
 	public void
-	givenThatcalculateMenstrualCycleLength_isGivenAnInputOfStartDateToBeFifthNovember2025AndEndDateToBeThirdDecember2025_assertThatTheExpectedResultIsTwentyNinedays() {
+	givenThatcalculateMonthlyMenstrualCycleLength_isGivenAnInputOfStartDateToBeFifthNovember2025AndEndDateToBeThirdDecember2025_assertThatTheExpectedResultIsTwentyNinedays() {
 		
 		int firstDayOfCycle = 5;
 		String firstMonthOfCycle = "November";
@@ -44,15 +44,15 @@ public class MenstrualAppTest {
 		int nextYearOfCycle = 2025;
 		int expectedResult = 29;
 		MenstrualApp menstrualApp = new MenstrualApp ();
-		int actualResult = menstrualApp.calculateMenstrualCycleLength(firstDayOfCycle, firstMonthOfCycle, firstYearOfCycle, 
-																	  lastDayOfCycle, nextMonthOfCycle, nextYearOfCycle);
+		int actualResult = menstrualApp.calculateMonthlyMenstrualCycleLength(firstDayOfCycle, firstMonthOfCycle, firstYearOfCycle, 
+																			 lastDayOfCycle, nextMonthOfCycle, nextYearOfCycle);
 		assertEquals(expectedResult, actualResult);	
 			
 	}
 	
 		@Test
 	public void
-	givenThatcalculateMenstrualCycleLength_isGivenAnInputOfStartDateToBeSecondMarch2026AndEndDateToBeThirtiethMarch2026_assertThatTheExpectedResultIsTwentyNinedays() {
+	givenThatcalculateMonthlyMenstrualCycleLength_isGivenAnInputOfStartDateToBeSecondMarch2026AndEndDateToBeThirtiethMarch2026_assertThatTheExpectedResultIsTwentyNinedays() {
 		
 		int firstDayOfCycle = 2;
 		String startMonthOfCycle = "March";
@@ -62,8 +62,8 @@ public class MenstrualAppTest {
 		int endYearOfCycle = 2026;
 		int expectedResult = 29;
 		MenstrualApp menstrualApp = new MenstrualApp ();
-		int actualResult = menstrualApp.calculateMenstrualCycleLength(firstDayOfCycle, startMonthOfCycle, startYearOfCycle, 
-																	  lastDayOfCycle, endMonthOfCycle, endYearOfCycle);
+		int actualResult = menstrualApp.calculateMonthlyMenstrualCycleLength(firstDayOfCycle, startMonthOfCycle, startYearOfCycle, 
+																	  		 lastDayOfCycle, endMonthOfCycle, endYearOfCycle);
 		assertEquals(expectedResult, actualResult);	
 			
 	}
@@ -86,12 +86,12 @@ public class MenstrualAppTest {
 
 	@Test
 	public void
-	givenThatPrintAverageCycleLengthStatusMessage_isGivenAnAverageCycleLengthOfForty_assertThatExpectedResultReturnsAbnormalCycleLengthMessage() {
+	givenThatAverageCycleLengthStatusMessage_isGivenAnAverageCycleLengthOfForty_assertThatExpectedResultReturnsAbnormalCycleLengthMessage() {
 	
 		int averageCycleLength = 40;
 		String expectedResult = "Abnormal cycle length";
 		MenstrualApp menstrualApp = new MenstrualApp ();
-		String actualResult = menstrualApp.printAverageCycleLengthStatusMessage(40, 39, 40);
+		String actualResult = menstrualApp.averageCycleLengthStatusMessage(40, 39, 40);
 		
 		assertEquals(expectedResult, actualResult);	
 		
@@ -100,12 +100,12 @@ public class MenstrualAppTest {
 	
 	@Test
 	public void
-	givenThatPrintAverageCycleLengthStatusMessage_isGivenAnAverageCycleLengthOfTwentyEight_assertThatExpectedResultReturnsNormalCycleLengthMessage() {
+	givenThatAverageCycleLengthStatusMessage_isGivenAnAverageCycleLengthOfTwentyEight_assertThatExpectedResultReturnsNormalCycleLengthMessage() {
 	
-		int averageCycleLength = 25;
+		int averageCycleLength = 28;
 		String expectedResult = "Normal cycle length";
 		MenstrualApp menstrualApp = new MenstrualApp ();
-		String actualResult = menstrualApp.printAverageCycleLengthStatusMessage(28, 29, 28);
+		String actualResult = menstrualApp.averageCycleLengthStatusMessage(28, 29, 28);
 		
 		assertEquals(expectedResult, actualResult);	
 		
