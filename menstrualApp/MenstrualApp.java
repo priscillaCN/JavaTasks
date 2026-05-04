@@ -32,8 +32,8 @@ public class MenstrualApp {
 	}
 
 
-	public static int calculateMenstrualCycleLength(int firstDayOfCycle, String startMonthOfCycle, int startYearOfCycle, 
-													int lastDayOfCycle, String endMonthOfCycle, int endYearOfCycle) {
+	public static int calculateMonthlyMenstrualCycleLength(int firstDayOfCycle, String startMonthOfCycle, int startYearOfCycle, 
+															int lastDayOfCycle, String endMonthOfCycle, int endYearOfCycle) {
 		
 		int daysOfCycleinStartMonth = numberOfdaysInMonth(startMonthOfCycle, startYearOfCycle) - (firstDayOfCycle - 1);
 		
@@ -62,7 +62,7 @@ public class MenstrualApp {
 	}
 	
 	
-	public static String printAverageCycleLengthStatusMessage(int firstMonthCycleLength, int secondMonthCycleLength, int thirdMonthCycleLength) {
+	public static String averageCycleLengthStatusMessage(int firstMonthCycleLength, int secondMonthCycleLength, int thirdMonthCycleLength) {
 		
 		String message = "";
 		
