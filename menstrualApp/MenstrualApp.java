@@ -33,11 +33,9 @@ public class MenstrualApp {
 
 
 	public static int calculateMonthlyMenstrualCycleLength(int firstDayOfCycle, String startMonthOfCycle, int startYearOfCycle, 
-<<<<<<< HEAD
+
 															int lastDayOfCycle, String endMonthOfCycle, int endYearOfCycle) {
-=======
-														   int lastDayOfCycle, String endMonthOfCycle, int endYearOfCycle) {
->>>>>>> 23b18031b8ca0288ad4fd17003b391734854197b
+
 		
 		int daysOfCycleinStartMonth = numberOfdaysInMonth(startMonthOfCycle, startYearOfCycle) - (firstDayOfCycle - 1);
 		

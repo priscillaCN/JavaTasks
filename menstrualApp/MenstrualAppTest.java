@@ -1,5 +1,5 @@
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MenstrualAppTest {
 	
@@ -52,11 +52,7 @@ public class MenstrualAppTest {
 	
 		@Test
 	public void
-<<<<<<< HEAD
 	givenThatCalculateMonthlyMenstrualCycleLength_isGivenAnInputOfStartDateToBeSecondMarch2026AndEndDateToBeThirtiethMarch2026_assertThatTheExpectedResultIsTwentyNinedays() {
-=======
-	givenThatcalculateMonthlyMenstrualCycleLength_isGivenAnInputOfStartDateToBeSecondMarch2026AndEndDateToBeThirtiethMarch2026_assertThatTheExpectedResultIsTwentyNinedays() {
->>>>>>> 23b18031b8ca0288ad4fd17003b391734854197b
 		
 		int firstDayOfCycle = 2;
 		String startMonthOfCycle = "March";
@@ -67,11 +63,9 @@ public class MenstrualAppTest {
 		int expectedResult = 29;
 		MenstrualApp menstrualApp = new MenstrualApp ();
 		int actualResult = menstrualApp.calculateMonthlyMenstrualCycleLength(firstDayOfCycle, startMonthOfCycle, startYearOfCycle, 
-<<<<<<< HEAD
-																			  lastDayOfCycle, endMonthOfCycle, endYearOfCycle);
-=======
+
+																			  lastDayOfCycle, endMonthOfCycle, endYearOfCycle,
 																	  		 lastDayOfCycle, endMonthOfCycle, endYearOfCycle);
->>>>>>> 23b18031b8ca0288ad4fd17003b391734854197b
 		assertEquals(expectedResult, actualResult);	
 			
 	}
@@ -94,11 +88,7 @@ public class MenstrualAppTest {
 
 	@Test
 	public void
-<<<<<<< HEAD
 	givenThatAverageCycleLengthStatusMessage_isGivenAnAverageCycleLengthOfFortyDays_assertThatExpectedResultReturnsAbnormalCycleLengthMessage() {
-=======
-	givenThatAverageCycleLengthStatusMessage_isGivenAnAverageCycleLengthOfForty_assertThatExpectedResultReturnsAbnormalCycleLengthMessage() {
->>>>>>> 23b18031b8ca0288ad4fd17003b391734854197b
 	
 		int averageCycleLength = 40;
 		String expectedResult = "Abnormal cycle length";
@@ -112,11 +102,7 @@ public class MenstrualAppTest {
 	
 	@Test
 	public void
-<<<<<<< HEAD
-	givenThatAverageCycleLengthStatusMessage_isGivenAnAverageCycleLengthOfTwentyEightDays_assertThatExpectedResultReturnsNormalCycleLengthMessage() {
-=======
 	givenThatAverageCycleLengthStatusMessage_isGivenAnAverageCycleLengthOfTwentyEight_assertThatExpectedResultReturnsNormalCycleLengthMessage() {
->>>>>>> 23b18031b8ca0288ad4fd17003b391734854197b
 	
 		int averageCycleLength = 28;
 		String expectedResult = "Normal cycle length";

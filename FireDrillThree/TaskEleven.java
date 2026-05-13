@@ -1,4 +1,4 @@
-public class TaskNine {
+public class TaskEleven {
 
 	public static void main(String... args) {
 
@@ -44,9 +44,15 @@ public class TaskNine {
 			System.out.println("The minimum element in odd indexes is: " + minimumElementInOddIndexes);
 
 
+		int maximumElementInEvenIndexes = maximumOfEvenIndexes(numbers);
+			System.out.println("The maximum element in even indexes is: " + maximumElementInEvenIndexes);
 
+
+		int maximumElementInOddIndexes = maximumOfOddIndexes(numbers);
+			System.out.println("The maximum element in odd indexes is: " + maximumElementInOddIndexes);
 
 		}
+
 
 
 	public static void evenIndexes(int[] numbers) {
@@ -120,18 +126,16 @@ public class TaskNine {
 
 
 		
-			if (numbers[index] < minimum) 
+			if (evenNumbers < minimum) 
 				minimum = numbers[index];	
 				
 		}
 
 		return minimum;
 
-	
-
 	}
 
-public static int minimumOfOddIndexes(int[] numbers) {
+	public static int minimumOfOddIndexes(int[] numbers) {
 
 		int minimum = numbers[0];
 		int oddNumbers = 0;
@@ -145,14 +149,60 @@ public static int minimumOfOddIndexes(int[] numbers) {
 
 
 		
-			if (numbers[index] < minimum) 
+			if (oddNumbers < minimum) 
 				minimum = numbers[index];	
 				
 		}
 
 		return minimum;
 
-	
+	}
+
+
+	public static int maximumOfEvenIndexes(int[] numbers) {
+
+		int maximum = numbers[0];
+		int evenNumbers = 0;
+
+		
+
+		for (int index = 0; index < numbers.length; index++) {
+
+			if (index % 2 == 0)
+				evenNumbers = numbers[index];
+
+
+		
+			if (evenNumbers > maximum)
+				maximum = numbers[index];	
+				
+		}
+
+		return maximum;
+
+	}
+
+
+	public static int maximumOfOddIndexes(int[] numbers) {
+
+		int maximum = numbers[0];
+		int oddNumbers = 0;
+
+		
+
+		for (int index = 0; index < numbers.length; index++) {
+
+			if (index % 2 != 0)
+				oddNumbers = numbers[index];
+
+
+		
+			if (oddNumbers > maximum)
+				maximum = numbers[index];	
+				
+		}
+
+		return maximum;
 
 	}
 

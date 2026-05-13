@@ -80,10 +80,9 @@ public class ArraySnacks {
 		char[] letters = word.toCharArray();
 		
 		for (int element = 0; element < letters.length / 2; element++) {
-
-			if (letters[element] != letters[letters.length - 1 - element]) {
-            return false; 
 			
+			if (letters[element] != letters[letters.length - 1 - element]) {
+				return false; 	
         }
     }
 
@@ -143,6 +142,23 @@ public class ArraySnacks {
 	}
 	
 	
+	public static char[] concatenateArrays (char[] arrayLetters, int[] arrayNumbers) {
+		
+		char [] result = new char [arrayLetters.length + arrayNumbers.length];
+		
+			for(int index = 0; index < arrayLetters.length; index++) {
+				result[index] = arrayLetters[index];
+			}
+			
+			for (int index = 0; index < arrayNumbers.length; index++) {
+				result[arrayLetters.length + index] = (char) ('0' + arrayNumbers[index]);
+			}
+			
+		return result;
+	}
+	
+	
+	
 	
 	//CALLING ALL FUNCTIONS IN MAIN METHOD
 	
@@ -167,7 +183,7 @@ public class ArraySnacks {
 		System.out.println("Enter a number: ");
 		int userNumber = collectInput.nextInt();
 		
-		boolean isFound = isElementFound(numbers);
+		boolean isFound = isElementFound(numbers, userNumber);
 			System.out.println(userNumber + " occurs in the array: " + isFound);
 		
 		
@@ -189,7 +205,8 @@ public class ArraySnacks {
 		System.out.println("Enter a word to check if it's a palindrome: ");
 		
 		String word = collectInput.nextLine();
-		Boolean checkIfPalindrome = isPalindrome(word);
+		
+		boolean checkIfPalindrome = isPalindrome(word);
 		
 			System.out.println(word + " is a palindrome: " + checkIfPalindrome);
 	
@@ -201,8 +218,20 @@ public class ArraySnacks {
 			
 		int sumThree = sumOfNumbersDoWhileLoop(numbers);
 			System.out.println("Sum is: " + sumThree);
-				
+			
+			
+		char[] arrayLetters = {'a', 'b', 'c'};
+		int[] arrayNumbers = {1, 2, 3};
 		
+		char[] concatenate = concatenateArrays (arrayLetters, arrayNumbers);
+		
+		System.out.println(new String (concatenate) + " ");
+		
+		for(char c : concatenate) {
+			System.out.print(c + " ");
+		}
+				
+		System.out.println();
 	
 	}
 
