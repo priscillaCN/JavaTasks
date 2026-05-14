@@ -5,35 +5,58 @@ public class StandardDeviationTest {
 
 	@Test
 	public void
-	givenThatSumOfNumbers_isGivenAnInputOfTenNumbers_assertThatTheSumIsOneHundred() {
+	givenSumOfNumbers_whenInputIsTenNumbers_thenSumIsOneHundred() {
 		
 		double [] numbers = {16, 6, 16, 25, 3, 15, 7, 12};
 		double expectedResult = 100;
 		double actualResult = StandardDeviation.sumOfNumbers(numbers);
 		
-		assertEquals(expectedResult, actualResult);
+		assertEquals(expectedResult, actualResult, 0.01);
 	}
 	
 	@Test
 	public void
-	givenThatmeanOfNumbers_isGivenAnInputOfTenNumbers_assertThatTheMeanIsTwelvePointFive() {
+	givenmeanOfNumbers_whenInputIsTenNumbers_thenMeanIsTwelvePointFive() {
 		
 		double [] numbers = {16, 6, 16, 25, 3, 15, 7, 12};
 		double expectedResult = 12.5;
 		double actualResult = StandardDeviation.meanOfNumbers(numbers);
 		
-		assertEquals(expectedResult, actualResult);
+		assertEquals(expectedResult, actualResult, 0.01);
 	}
 	
 	@Test
 	public void
-	givenThatmeanDifference_isGivenAnInputOfTenNumbers_assertThatTheSumOfMeanDifferenceIsTwo() {
+	givenMeanDifference_whenInputIsTenNumbers_thenSumOfMeanDifferenceIsThreeHundredAndFifty() {
 		
-		double [] numbers = {{16, 6, 16, 25, 3, 15, 7, 12};
-		double expectedResult = 2;
-		double actualResult = StandardDeviation.meanOfNumbers(numbers);
+		double [] numbers = {16, 6, 16, 25, 3, 15, 7, 12};
+		double expectedResult = 350;
+		double actualResult = StandardDeviation.meanDifference(numbers);
 		
-		assertEquals(expectedResult, actualResult);
+		assertEquals(expectedResult, actualResult, 0.01);
 	}
 
+
+	@Test
+	public void
+	givenCalculateVariance_whenInputIsTenNumbers_thenVarianceIsThreeHundredAndFifty() {
+		
+		double [] numbers = {16, 6, 16, 25, 3, 15, 7, 12};
+		double expectedResult = 43.75;
+		double actualResult = StandardDeviation.calculateVariance(numbers);
+		
+		assertEquals(expectedResult, actualResult, 0.01);
+	}
+	
+	
+	@Test
+	public void
+	givenCalculateStandardDeviation_whenInputIsTenNumbers_thenVarianceIsSixPointSixOne() {
+		
+		double [] numbers = {16, 6, 16, 25, 3, 15, 7, 12};
+		double expectedResult = 6.61;
+		double actualResult = StandardDeviation.calculateStandardDeviation(numbers);
+		
+		assertEquals(expectedResult, actualResult, 0.01);
+	}
 }
