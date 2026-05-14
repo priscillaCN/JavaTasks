@@ -27,7 +27,7 @@ public class StandardDeviation {
 		double sumOfMeanDifference = 0;
 		
 		for(double num : numbers) {
-			sumofMeanDifference += (num - mean);
+			sumOfMeanDifference += Math.pow(num - mean, 2);
 		}
 		
 		return sumOfMeanDifference;
@@ -41,16 +41,16 @@ public class StandardDeviation {
 		double count = numbers.length;
 		
 		
-		return (meanDiff * meanDiff) / count;
+		return meanDiff / count;
 		
 	}
 	
 	
-	public static double standardDeviation (double [] numbers) {
+	public static double calculateStandardDeviation (double [] numbers) {
 	
 		double variance = calculateVariance(numbers);
 		
-		return math.sqrt(variance);
+		return Math.sqrt(variance);
 		
 	}
 
